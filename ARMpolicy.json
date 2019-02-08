@@ -1,0 +1,18 @@
+{
+  "mode": "indexed",
+  "policyRule": {
+    "if": {
+      "not": {
+        "field": "location",
+        "in": [
+          "westeurope",
+          "global"
+        ]
+      }
+    },
+    "then": {
+      "effect": "deny"
+    }
+  },
+  "parameters": {}
+}
