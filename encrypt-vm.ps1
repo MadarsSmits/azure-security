@@ -8,5 +8,5 @@ $KeyVaultResourceId = $KeyVault.ResourceId;
 
 Set-AzureRmKeyVaultAccessPolicy -VaultName $KeyVaultName -ResourceGroupName $KeyVaultRGName -EnabledForDiskEncryption
 Set-AzureRmKeyVaultAccessPolicy -VaultName $KeyVaultName -ResourceGroupName $KeyVaultRGName -EnabledForDeployment
-Set-AzureRmKeyVaultAccessPolicy -VaultName $KeyVaultName -ResourceGroupName $KeyVaultName -EnabledForTemplateDeployment
-#Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $vmRGName -VMName $vmName -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
+Set-AzureRmKeyVaultAccessPolicy -VaultName $KeyVaultName -ResourceGroupName $KeyVaultRGName -EnabledForTemplateDeployment
+Set-AzureRmVMDiskEncryptionExtension -ResourceGroupName $vmRGName -VMName $vmName -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
