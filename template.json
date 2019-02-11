@@ -58,7 +58,7 @@
         "virtualNetworkName": "valis5-VNET",
         "nsgName": "valis5-NSG",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-        "keyvaultname": "[concat('valis5-', uniquestring(resourceGroup().id))]"
+        "keyvaultname": "[concat('valis5-KeyVault-', uniquestring(subscription().subscriptionId))]"
     },
     "resources": [
         {
