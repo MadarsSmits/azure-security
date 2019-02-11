@@ -17,4 +17,4 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName "valis5" -TemplateUri "htt
 - valis5-VM1-PublicIP
 - valis5-NSG
 - valis5-VNET
-- valis5-KeyVault-
+- valis5-

@@ -1,6 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.2",
+    "contentVersion": "1.0.0.3",
     "parameters": {
         "adminUsername": {
             "type": "string",
@@ -58,7 +58,7 @@
         "virtualNetworkName": "valis5-VNET",
         "nsgName": "valis5-NSG",
         "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
-        "keyvaultname": "[concat('valis5-KeyVault-', uniquestring(subscription().subscriptionId))]"
+        "keyvaultname": "[concat('valis5-', uniquestring(subscription().subscriptionId))]"
     },
     "resources": [
         {
