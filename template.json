@@ -214,7 +214,7 @@
               "accessPolicies": [
                 {
                   "tenantId": "[subscription().tenantId]",
-                  "objectId": "GEN-AAD-OBJECTID",
+                  "objectId": "4ae5efff-929a-40d2-be14-7e63e8a0c8c4",
                   "permissions": {
                     "keys": "[parameters('keysPermissions')]",
                     "secrets": "[parameters('secretsPermissions')]"
