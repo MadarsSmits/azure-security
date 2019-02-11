@@ -28,20 +28,7 @@
             "metadata": {
                 "description": "Location for all resources."
             }
-        },
-        "tenantId": {
-            "type": "string",
-            "metadata": {
-              "description": "Tenant Id for the subscription and use assigned access to the vault. Available from the Get-AzureRMSubscription PowerShell cmdlet"
-            }
-          },
-          "accessPolicies": {
-            "type": "array",
-            "defaultValue": "{}",
-            "metadata": {
-              "description": "Access policies object {\"tenantId\":\"\",\"objectId\":\"\",\"permissions\":{\"keys\":[\"\"],\"secrets\":[\"\"]}}"
-            }
-          }
+        }
     },
     "variables": {
         "nicName1": "valis5-VM1-NIC",
@@ -208,8 +195,8 @@
                 "enabledForDeployment": true,
                 "enabledForTemplateDeployment": true,
                 "enabledForDiskEncryption": true,
-                "tenantId": "[parameters('tenantId')]",
-                "accessPolicies": "[parameters('accessPolicies')]",
+                "tenantId": "[reference(concat('Microsoft.Compute/virtualMachines/', variables('vmName1')), '2017-03-30', 'Full').identity.tenantId]",
+                "accessPolicies": "[reference(concat('Microsoft.Compute/virtualMachines/', variables('vmName1')), '2017-03-30', 'Full').identity.principalId]",
                 "sku": {
                     "name": "standard",
                     "family": "A"

@@ -5,10 +5,10 @@ Azure Workshop "Valis v0.5"
 Template "template.json"
 ---------------
 ```
-az group create --name valis5 --location "westeurope" --verbose
+New-AzureRmResourceGroup -Name valis5 -Location "West Europe" -Verbose
 ```
 ```
-az group deployment create --template-uri https://raw.githubusercontent.com/MadarsSmits/azure-security/master/template.json --verbose --resource-group valis5 --debug
+New-AzureRmResourceGroupDeployment -ResourceGroupName "valis5" -TemplateUri "https://raw.githubusercontent.com/MadarsSmits/azure-security/master/template.json" -Verbose -Debug
 ```
 
 - valis5-VM1
