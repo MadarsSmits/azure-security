@@ -8,7 +8,7 @@ Template "template.json"
 New-AzureRmResourceGroup -Name valis5 -Location "West Europe" -Verbose
 ```
 ```
-New-AzureRmResourceGroupDeployment -ResourceGroupName "valis5" -TemplateUri "https://raw.githubusercontent.com/MadarsSmits/azure-security/master/template.json" -Verbose -Debug
+New-AzureRmResourceGroupDeployment -ResourceGroupName "valis5" -TemplateUri "https://raw.githubusercontent.com/MadarsSmits/azure-security/master/template.json" -Verbose
 ```
 
 - valis5-VM1
