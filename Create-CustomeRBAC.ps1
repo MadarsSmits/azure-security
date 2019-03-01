@@ -1,4 +1,4 @@
-$subscriptionID = (Get-AzureRmSubscription)[1].Id
+$subscriptionID = (Get-AzureRmSubscription)[0].Id
     
 $role = Get-AzureRmRoleDefinition "Virtual Machine Contributor"
 $role.Id = $null
