@@ -1,7 +1,7 @@
-$vmRGName = 'AutoStartStop-Demo';
-$vmName = 'StartStop-Demo';
-$KeyVaultRGName = 'KeyVault-Demo';
-$KeyVaultName = 'SQUALIO-KeyVault';
+$vmRGName = 'valis5';
+$vmName = 'valis5-VM1';
+$KeyVaultRGName = 'valis5';
+$KeyVaultName = 'valis5-***';
 $KeyVault = Get-AzureRmKeyVault -VaultName $KeyVaultName -ResourceGroupName $KeyVaultRGName;
 $diskEncryptionKeyVaultUrl = $KeyVault.VaultUri;
 $KeyVaultResourceId = $KeyVault.ResourceId;
