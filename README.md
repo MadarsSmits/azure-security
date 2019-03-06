@@ -43,3 +43,6 @@ Get-AzRoleDefinition -Scope "/subscriptions/$subscriptionID" "Virtual Machine Op
 ```
 https://raw.githubusercontent.com/MadarsSmits/azure-security/master/ARMpolicy.json
 ```
+```
+wget https://raw.githubusercontent.com/MadarsSmits/azure-security/master/encrypt-vm.ps1
+```
