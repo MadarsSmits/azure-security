@@ -52,7 +52,21 @@
             "metadata": {
                 "description": "ObjectID variable"
             }
-        }
+        },
+        "workspaceName": {
+            "type": "string",
+             "metadata": {
+              "description": "Specifies the name of the workspace."
+            },
+            "defaultValue": "valis5-loganalytics"
+        },
+        "workspaceSku": {
+            "type": "string",
+             "defaultValue": "Free",
+             "metadata": {
+            "description": "Specifies the service tier of the workspace: Standalone, PerNode, Per-GB"
+         }
+          }
     },
     "variables": {
         "nicName1": "valis5-VM1-NIC",
@@ -231,6 +245,20 @@
                 "name": "standard",
                 "family": "A"
               }
+            }
+          },
+          {
+            "type": "Microsoft.OperationalInsights/workspaces",
+            "name": "[parameters('workspaceName')]",
+            "apiVersion": "2015-11-01-preview",
+            "location": "[parameters('location')]",
+            "properties": {
+                "sku": {
+                    "name": "[parameters('workspaceSku')]"
+                },
+                "features": {
+                    "searchVersion": 1
+                }
             }
           }
     ]
