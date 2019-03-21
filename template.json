@@ -215,7 +215,7 @@
                         "version": "latest"
                     },
                     "osDisk": {
-                        "name": "myManagedOSDisk",
+                        "name": "valis5-VM1-OS-DISK",
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
                     }

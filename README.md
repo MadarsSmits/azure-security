@@ -20,8 +20,20 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName "valis5" -TemplateUri "htt
 - valis5-VM1-PublicIP
 - valis5-NSG
 - valis5-VNET
-- valis5-qjlnmau2gdwqe
+- valis5-automation
+- valis5-ceav5c3acbllu
+- valis5-loganalytics
+- valis5logsceav5c3acbllu
 
+```
+wget https://raw.githubusercontent.com/MadarsSmits/azure-security/master/Create-CustomeRBAC.ps1
+```
+```
+https://raw.githubusercontent.com/MadarsSmits/azure-security/master/ARMpolicy.json
+```
+```
+wget https://raw.githubusercontent.com/MadarsSmits/azure-security/master/encrypt-vm.ps1
+```
 ```
 Get-AzureRmRoleDefinition | Select-Object Name
 ```
