@@ -5,6 +5,9 @@ Azure Workshop "Valis v0.5"
 Template "template.json"
 ---------------
 ```
+Set-AzureRmContext -SubscriptionName "MSDN 1 (16.0X.)"
+```
+```
 New-AzureRmResourceGroup -Name valis5 -Location "West Europe" -Verbose
 ```
 ```
