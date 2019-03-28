@@ -25,4 +25,4 @@ $adUser = Get-AzureRmADUser -SearchString 'User3'
 New-AzureRmRoleAssignment `
     -ObjectId $adUser[0].Id `
     -RoleDefinitionName 'Virtual Machine Operator' `
-    -Scope "/subscriptions/$subscriptionID"
+    -Scope "/subscriptions/$subscriptionID" 
